@@ -14,3 +14,9 @@ def index(request):
 
 
     return HttpResponse("path used in project:\n"+r_string)
+
+
+def test(request):
+    return render(request, 'polls/index.html', {
+        'foo': 'bar',
+    }, content_type='application/xhtml+xml')
